@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meher Chaitanya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            display: inline-block;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        section {
+            display: none;
+            margin-bottom: 2rem;
+        }
+        section.active {
+            display: block;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        ul {
+            padding-left: 1.2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9em;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meher Chaitanya</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('bio')">About</a>
+        <a href="#" onclick="showSection('publications')">Publications</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </nav>
+    <main>
+        <section id="bio" class="active">
+            <h2>About Me</h2>
+            <p>I recently completed my PhD in Network Science from ETH Zürich, under the supervision of Prof. Dr. Ulrik Brandes. My research focused on opinion dynamics, graph algorithms, and machine learning on graphs.</p>
+            <p>My broader interests lie in scalable graph algorithms and graph-based machine learning. Outside academia, I enjoy hiking and exploring the outdoors.</p>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <h3>Accepted</h3>
+            <ul>
+                <li>Brauweiler, M., Chaitanya, M., Pfeffer, J., Brandes, U. “Decentralized Discourse: Interaction Dynamics on Mastodon”, ACM WebScience 2025 (Oral).</li>
+                <li>Chaitanya, M., Jaglan, K., Brandes, U. “Adjacency Search Embeddings”, TMLR 2024.</li>
+                <li>Jaglan, K.*, Chaitanya, M.*, et al. “Tight Sampling in Unbounded Networks”. AAAI ICWSM 2024. [*Equal Contribution]</li>
+                <li>Chaitanya, M., Barik, A., Honorio, J. “A Semidefinite Programming Formulation for Minimizing p-th Order Controversy...” Complex Networks XIII, 2024.</li>
+                <li>Chaitanya, M., Brandes, U. “Hardness Results for Seeding Complex Contagion...” Complex Networks X, 2021.</li>
+                <li>Dutta, D., Chaitanya, M., Kothapalli, K., Bera, D. “Applications of Ear Decomposition...” IPDPS 2017, IJNC 2018.</li>
+                <li>Chaitanya, M.*, Pachorkar, C.*, Kothapalli, K., Bera, D. “Efficient Parallel Ear Decomposition...” HiPC 2016. [Best Paper Award]</li>
+                <li>Chaitanya, M., Kothapalli, K. “Efficient Multicore Algorithms for Identifying Biconnected Components”, IPDPS 2015, IJNC 2016.</li>
+                <li>Banerjee, D. S., Chaitanya, M., et al. “Work Efficient Parallel Algorithms for Large Graph Exploration...”, JPDC 2015.</li>
+            </ul>
+            <h3>Under Review</h3>
+            <ul>
+                <li>Chaitanya, M., Barik, A., Rankawat, M., Honorio, J. “A Non-Convex Relaxation for Minimizing Polarization...”, Submitted to TMLR 2025.</li>
+                <li>Chaitanya, M. “Modeling Recommender Systems Using Friedkin-Johnsen Dynamics...”, ACM RecSys 2025.</li>
+            </ul>
+            <h3>In Progress</h3>
+            <ul>
+                <li>“Predictive Analysis of Twitter Attributes: Anticipating Privacy Concerns”. With Jaglan, K., Karuna, Vempati, A., Kumaraguru, P., Brandes, U.</li>
+                <li>“Adjacency Search Positional Encoders for Graph Transformers”. With My Le, Musco, C., Ruiz, L.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:meherchaitanya.pindiprolu@gmail.com">meherchaitanya.pindiprolu@gmail.com</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Meher Chaitanya</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
